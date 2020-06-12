@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Source+Sans+Pro:wght@200;300&display=swap');
+
+.bg-light {
+  background-color: transparent !important;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  font-weight: 700;
+}
+
+.navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-us {
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.container-fluid{
+    padding: 5px 60px;
+}
+
+body>div>header>h1{
+    font-family: 'Anton';
+    font-size: 60px;
+}
+
+.cfont{
+    font-family: 'Source Sans Pro';
+    font-weight: 200;
+    font-size: 20px;
+}
+
+

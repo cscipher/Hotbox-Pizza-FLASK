@@ -1,0 +1,294 @@
+<html>
+    <head>
+        <title>Place Order</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/changes.css">
+
+    </head>
+
+    <body>
+        <div class="topbox" style="background-image: url('../static/images/coverpep1.jpg'); background-repeat: no-repeat; background-size: cover; filter: brightness(130%);">
+            
+            <nav class="navbar navbar-expand-lg nav nav-masthead navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contact">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{checklogin}}</a>
+                    </li>
+                    
+                    {%if checklogin!=None%}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                    {%endif%}
+                    
+                  </ul>
+                </div>
+            </nav>
+            
+            <header class="text-center ">
+                <h1><img src="../static/images/pizza-logo.png" style="width: 500px;"></h1>
+                <h4 class="fancyfont">Get some pizza, homie!</h4>
+                <br>
+                <br>
+            </header>
+            
+        </div>
+
+        <main>
+            <div class="container-fluid">
+                <section id="contact-form">
+                    <h2>Place your order</h2>
+                    <hr>
+                    <form method="POST" action="">
+                        
+                        <h4>Delivery type </h4>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input " type="radio" name="inlineRadioOptions" id="Home Delivery" value="Home Delivery">
+                            <label class="form-check-label" for="Home Delivery">Home Delivery</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Pickup" value="Pickup">
+                            <label class="form-check-label" for="Pickup">Pickup</label>
+                        </div>
+                        
+                        <hr>
+                        
+                        <h4>Contact Details</h4>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" name="name" placeholder="Your name">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <input type="email" class="form-control" name="mail" placeholder="Mail address">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" name="mob" placeholder="Mobile no.">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" name="address" placeholder="Address">
+                            </div>
+                        </div>
+
+                    
+                        <hr>
+                        <h4>Select Ingredients (₹30 each)</h4>
+                        
+                        <div class="card-columns">
+                            <div class="card">
+                                <img src="../static/images/cheese.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <h5 class="card-title">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="chkoption" value="Extra cheese" type="checkbox" id="Extra cheese">
+                                        <label class="form-check-label" for="Extra Cheese">
+                                            Extra cheese
+                                        </label>
+                                    </div>
+                                </h5>
+                                </div>
+                            </div>
+                        
+                        <div class="card">
+                            <img src="../static/images/Tomato.jpg" class="card-img-top">
+                            <div class="card-body">
+                              <h5 class="card-title">
+                                <div class="form-check">
+                                    <input class="form-check-input" name="chkoption"  value="Tomatoes" type="checkbox" id="Tomatoes">
+                                    <label class="form-check-label" for="Tomatoes">
+                                        Tomatoes
+                                    </label>
+                                </div> 
+                              </h5>
+                            </div>
+                            </div>
+                            
+                            <div class="card">
+                                <img src="../static/images/redpepper.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <h5 class="card-title">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="chkoption"  value="Red pepper" type="checkbox" id="Red pepper">
+                                        <label class="form-check-label" for="Red pepper">
+                                            Red pepper
+                                        </label>
+                                    </div> 
+                                </h5>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <img src="../static/images/Jalapeno.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <h5 class="card-title">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="chkoption"  value="Jalepenos" type="checkbox" id="Jalepenos">
+                                        <label class="form-check-label" for="Jalepenos">
+                                            Jalapenos
+                                        </label>
+                                    </div> 
+                                </h5>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img src="../static/images/onion.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <h5 class="card-title">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="chkoption"  value="Onions" type="checkbox" id="Onions">
+                                        <label class="form-check-label" for="Onions">
+                                            Onions
+                                        </label>
+                                    </div> 
+                                </h5>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img src="../static/images/Paneer.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <h5 class="card-title">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="chkoption"  value="paneer" type="checkbox" id="paneer">
+                                        <label class="form-check-label" for="paneer">
+                                            Paneer
+                                        </label>
+                                    </div> 
+                                </h5>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img src="../static/images/GoldenCorn.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <h5 class="card-title">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="chkoption"  value="Golden corn" type="checkbox" id="Golden corn">
+                                        <label class="form-check-label" for="Golden corn">
+                                            Golden corn
+                                        </label>
+                                    </div> 
+                                </h5>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img src="../static/images/Capsicum.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <h5 class="card-title">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="chkoption"  value="Capsicum" type="checkbox" id="Capsicum">
+                                        <label class="form-check-label" for="Capsicum">
+                                            Capsicum
+                                        </label>
+                                    </div> 
+                                </h5>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img src="../static/images/Olives.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <h5 class="card-title">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="chkoption"  value="Black olives" type="checkbox" id="Black olives">
+                                        <label class="form-check-label" for="Black olives
+                                        Black olives">
+                                            Black olives
+                                        </label>
+                                    </div> 
+                                </h5>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img src="../static/images/Mushroom.jpg" class="card-img-top">
+                                <div class="card-body">
+                                <h5 class="card-title">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="chkoption"  value="Mushrooms" type="checkbox" id="Mushrooms">
+                                        <label class="form-check-label" for="Mushrooms">
+                                            Mushrooms
+                                        </label>
+                                    </div> 
+                                </h5>
+                                </div>
+                            </div>
+                        </div>
+                                                
+                        <hr>
+
+                        <h4>Size</h4>
+                        <select class="custom-select my-1 mr-sm-2 mfont" name="size">
+                            
+                            <option selected value="regular">Regular - 7"</option>
+                            <option selected value="Medium">Medium - 10"</option>
+                            <option selected value="Large">Large - 14"</option>
+
+                        </select>
+                        <hr>
+
+                        <h4>Crust type (₹ R,M,L)</h4>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio"  name="crs" id="Thin Crust" value="Thin Crust">
+                            <label class="form-check-label" for="Thin Crust">Thin Crust (₹ 99,199,299)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="crs" id="Magic Pan" value="Magic Pan">
+                            <label class="form-check-label" for="Magic Pan">Magic Pan (₹ 89,189,n/a)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="crs" id="Cheese Burst" value="Cheese Burst">
+                            <label class="form-check-label" for="Cheese Burst">Cheese Burst (₹ 129,249,349)</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="crs" id="Fresh Hand tossed" value="Fresh Hand tossed">
+                            <label class="form-check-label" for="Fresh Hand tossed">Fresh Hand tossed (₹ 79,179,289)</label>
+                        </div>
+                        
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Confirm</button>
+
+                        {%if confirm==True%}
+                            <div class="text-center alert alert-success" role="alert">Order placed! Click <a href="/">here </a>to go to homepage</div>
+                        {%endif%}
+
+                    </form>
+                </section>
+            </div>
+
+        </main>
+
+        <footer class="mastfoot mt-auto text-center">
+            <div class="inner">
+              <p>
+                &copy; Copyright
+                <a href="#">HotBox Pizza 2020</a>
+              </p>
+            </div>
+          </footer>
+    </body>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

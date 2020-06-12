@@ -1,0 +1,8 @@
+runtime : python38
+SECRET_KEY : 'kuyrgfurbgwkfhgsbkethgbt'
+
+env_variables:
+  CLOUD_SQL_USERNAME: cipher
+  CLOUD_SQL_PASSWORD: 240301
+  CLOUD_SQL_DATABASE_NAME: flask_pizza
+  CLOUD_SQL_CONNECTION_NAME: flask-pizza-del:us-central1:hotbox-instance 
